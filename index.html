@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kyle Alvaro | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: #111111;
+      color: #f8f8f8;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+    .section-bg {
+      background: #181818;
+    }
+    .card-bg {
+      background: #222222;
+    }
+    .text-main {
+      color: #f8f8f8;
+    }
+    .text-sub {
+      color: #b0b0b0;
+    }
+    .btn-main {
+      background: #f8f8f8;
+      color: #111111;
+      font-weight: 600;
+    }
+    .btn-main:hover {
+      background: #b0b0b0;
+      color: #111111;
+    }
+    .border-main {
+      border-color: #222222;
+    }
+    .shadow-main {
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+    }
+    .nav-link {
+      color: #f8f8f8;
+      transition: color 0.2s;
+    }
+    .nav-link:hover {
+      color: #b0b0b0;
+    }
+    .footer-bg {
+      background: #181818;
+    }
+    @keyframes cert-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    #cert-track {
+      min-width: 200%;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 section-bg backdrop-blur shadow-sm border-b border-[#222222]">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-xl text-main tracking-wide">Kydev Portfolio</span>
+      </div>
+      <div class="hidden md:flex gap-8 font-semibold">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#works" class="nav-link">Works</a>
+        <a href="#photography" class="nav-link">Photography</a>
+        <a href="#videography" class="nav-link">Videography</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="mailto:kydev1323@gmail.com" class="btn-main px-4 py-2 rounded-lg shadow hover:bg-[#b0b0b0] transition hidden md:inline-block">Hire Me</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="pt-28 pb-16 section-bg border-b border-[#222222]">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
+      <div class="flex-shrink-0" data-aos="fade-right">
+        <img src="./img/kyle.jpg" alt="Kyle Alvaro" class="w-48 h-48 rounded-full border-4 border-[#f8f8f8] shadow-2xl object-cover">
+      </div>
+      <div class="flex-1 text-center md:text-left" data-aos="fade-left">
+        <h1 class="text-5xl font-extrabold mb-2 text-main tracking-tight">Kyle Joshua Noel P. Alvaro</h1>
+        <p class="text-2xl text-sub mb-4 font-medium">Front-End Developer | Photographer | Videographer</p>
+        <p class="text-sub mb-6">I create beautiful, responsive websites and capture moments through my lens. Let's build something amazing together!</p>
+        <div class="flex gap-4 justify-center md:justify-start mb-4">
+          <a href="https://www.facebook.com/PCM2600/" target="_blank" class="bg-[#f8f8f8] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kydev_pcm2600/" target="_blank" class="bg-[#222222] text-[#f8f8f8] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/MrKyDev" target="_blank" class="bg-[#f8f8f8] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition"><i class="fab fa-github"></i></a>
+          <a href="mailto:kydev1323@gmail.com" class="bg-[#b0b0b0] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#f8f8f8] transition"><i class="fas fa-envelope"></i></a>
+        </div>
+        <a href="#works" class="inline-block btn-main px-6 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition">View My Work</a>
+      </div>
+    </div>
+    <!-- Skills & Tech Stack (added inside About section) -->
+    <div class="max-w-6xl mx-auto mt-16 px-4">
+      <h2 class="text-4xl font-extrabold mb-10 text-center text-main" data-aos="fade-up">Skills & Tech Stack</h2>
+      <div class="flex flex-col md:flex-row gap-12 justify-center items-start">
+        <!-- Coding Languages & Frameworks -->
+        <div class="flex-1 card-bg rounded-2xl shadow-main p-8" data-aos="fade-right">
+          <h3 class="text-2xl font-bold mb-4 text-main">Coding Languages & Frameworks</h3>
+          <ul class="space-y-3 text-lg text-sub">
+            <li><i class="fab fa-html5 text-[#f06529] mr-2"></i>HTML5</li>
+            <li><i class="fab fa-css3-alt text-[#2965f1] mr-2"></i>CSS / Tailwind CSS</li>
+            <li><i class="fab fa-js-square text-[#f7df1e] mr-2"></i>JavaScript</li>
+            <li><i class="fas fa-code text-[#b0b0b0] mr-2"></i>Responsive Web Design</li>
+            <li><i class="fas fa-terminal text-[#b0b0b0] mr-2"></i>Git & GitHub</li>
+          </ul>
+        </div>
+        <!-- Software & Applications -->
+        <div class="flex-1 card-bg rounded-2xl shadow-main p-8" data-aos="fade-left">
+          <h3 class="text-2xl font-bold mb-4 text-main">Softwares / Applications I Use</h3>
+          <ul class="space-y-3 text-lg text-sub">
+            <li><i class="fas fa-camera-retro text-[#b0b0b0] mr-2"></i>Adobe Lightroom</li>
+            <li><i class="fas fa-video text-[#b0b0b0] mr-2"></i>Adobe Premiere Pro</li>
+            <li><i class="fas fa-film text-[#b0b0b0] mr-2"></i>Capcut</li>
+            <li><i class="fas fa-image text-[#b0b0b0] mr-2"></i>Figma</li>
+            <li><i class="fas fa-laptop-code text-[#b0b0b0] mr-2"></i>Visual Studio Code</li>
+            <li><i class="fas fa-laptop-code text-[#b0b0b0] mr-2"></i>Netbeans</li>
+            <li><i class="fas fa-desktop text-[#b0b0b0] mr-2"></i>Windows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificates Carousel -->
+    <div class="max-w-6xl mx-auto mt-16 px-4">
+      <h2 class="text-3xl font-extrabold mb-8 text-center text-main" data-aos="fade-up">Certificates</h2>
+      <div 
+        id="cert-carousel" 
+        class="relative overflow-hidden w-full h-[420px] rounded-2xl card-bg shadow-main cursor-pointer flex items-center justify-center"
+        onmouseenter="pauseCertCarousel()" 
+        onmouseleave="resumeCertCarousel()"
+        onclick="toggleCertCarousel()"
+      >
+        <div id="cert-track" class="absolute flex items-center h-full gap-12 will-change-transform" style="animation: cert-scroll 60s linear infinite;">
+          <!-- Replace the src with your certificate images -->
+          <img src="./img/certs/cert 1.jfif" alt="Certificate 1" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 2.jfif" alt="Certificate 2" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 3.jfif" alt="Certificate 3" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 4.jfif" alt="Certificate 4" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 5.png" alt="Certificate 5" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <!-- Duplicate for infinite effect -->
+          <img src="./img/certs/cert 1.jfif" alt="Certificate 1" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 2.jfif" alt="Certificate 2" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 3.jfif" alt="Certificate 3" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 4.jfif" alt="Certificate 4" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+          <img src="./img/certs/cert 5.png" alt="Certificate 5" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
+        </div>
+      </div>
+      <p class="text-sub text-center mt-3 text-base">Hover or click to pause the carousel and read certificates.</p>
+    </div>
+    <!-- Events Attended Section -->
+    <div class="max-w-6xl mx-auto mt-16 px-4">
+      <h2 class="text-3xl font-extrabold mb-8 text-center text-main" data-aos="fade-up">Events Attended</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Event 1 -->
+        <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="./img/UP.jfif" alt="Event 1" class="h-40 w-full object-cover rounded-xl mb-4 border-2 border-[#222222] bg-white" />
+          <h3 class="text-xl font-bold text-main mb-2 text-center">Behind the Canvas: The Art of Managing Art</h3>
+          <p class="text-sub text-center">March 5 & 7 | Darnay Demetillo Art Space, College of Arts and Communication, UP Baguio</p>
+        </div>
+        <!-- Event 2 -->
+        <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="./img/gdg.png" alt="Event 2" class="h-40 w-full object-cover rounded-xl mb-4 border-2 border-[#222222] bg-white" />
+          <h3 class="text-xl font-bold text-main mb-2 text-center">Google I/O Extended 2025 – Baguio</h3>
+          <p class="text-sub text-center">July 12, 2025 | University of Baguio</p>
+        </div>
+        <!-- Event 3 -->
+        <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="./img/DOST.jpg" alt="Event 3" class="h-40 w-full object-cover rounded-xl mb-4 border-2 border-[#222222] bg-white" />
+          <h3 class="text-xl font-bold text-main mb-2 text-center">Handa Pilipinas sa Bagong Pilipinas: Innovations in Climate and Disaster Resilience Nationwide Exposition Luzon Leg 2025</h3>
+          <p class="text-sub text-center">August 7 to 9, 2025 | Newtown Plaza Hotel, Baguio City</p>
+        </div>
+        <!-- Event 4 -->
+        <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="./img/DICT.jpg" alt="Event 4" class="h-40 w-full object-cover rounded-xl mb-4 border-2 border-[#222222] bg-white" />
+          <h3 class="text-xl font-bold text-main mb-2 text-center">AI. deas for Impact 2025: Kicking off Innovation in CAR</h3>
+          <p class="text-sub text-center">AI Hackathon and Technical Workshops | August 28 - 29, 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Section -->
+  <section id="works" class="py-24 section-bg border-b border-[#222222]">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-5xl font-extrabold mb-16 text-center text-main" data-aos="fade-up">Featured Website Projects</h2>
+      <div class="flex flex-col gap-24">
+        <!-- Project 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="100">
+          <img src="./img/ArtistHub.png" alt="ArtistHub Website" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="text-4xl font-bold mb-4 text-main">ArtistHub Website</h3>
+            <p class="text-2xl text-sub mb-8">A vibrant platform for Baguio's artists and artisans. Modern, responsive, and built with passion.</p>
+            <a href="https://artisthubbaguio.online" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="200">
+          <img src="./img/digital clock.png" alt="Digital Clock" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="text-4xl font-bold mb-4 text-main">Digital Clock</h3>
+            <p class="text-2xl text-sub mb-8">A responsive world clock with live updates and timezone selection.</p>
+            <a href="https://mrkydev.github.io/Digital-Clock/" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="flex flex-col lg:flex-row items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="300">
+          <img src="./img/tictac.png" alt="TicTacToe Game" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="text-4xl font-bold mb-4 text-main">TicTacToe Game</h3>
+            <p class="text-2xl text-sub mb-8">A clean, interactive Tic-Tac-Toe web app.</p>
+            <a href="https://mrkydev.github.io/Titactoe-Game/" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography Section -->
+  <section id="photography" class="py-24 section-bg border-b border-[#222222]">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-5xl font-extrabold mb-16 text-center text-main" data-aos="fade-up">Photography</h2>
+      <div class="flex flex-col gap-24 items-center">
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="zoom-in" data-aos-delay="100">
+          <img src="./img/cedia.jpg" alt="Boost Nissan Cedia" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">Boost Nissan Cedia</h3>
+            <p class="text-sub text-2xl">Owner: Bjorn Vibar</p>
+          </div>
+        </div>
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row-reverse items-center gap-12 w-full max-w-5xl" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./img/Int.jpg" alt="Honda Integra" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">Honda Integra</h3>
+            <p class="text-sub text-2xl">Owner: Aldwin Tiong</p>
+          </div>
+        </div>
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="zoom-in" data-aos-delay="300">
+          <img src="./img/miata.jpg" alt="Mazda Miata" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">Mazda Miata</h3>
+            <p class="text-sub text-2xl">Owner: Patrick Vannce</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videography Section -->
+  <section id="videography" class="py-24 section-bg border-b border-[#222222]">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-5xl font-extrabold mb-16 text-center text-main" data-aos="fade-up">Videography</h2>
+      <div class="flex flex-col gap-24 items-center">
+        <!-- University of the Cordilleras - (InTTO) AVP FIRST -->
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="100">
+          <img src="./img/InTTO AVP.png" alt="University of the Cordilleras - (InTTO) AVP" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg mb-4 lg:mb-0">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">University of the Cordilleras - (InTTO) AVP</h3>
+            <p class="text-sub text-2xl">A promotional video showcasing the university’s programs, services, and vibrant campus life.</p>
+          </div>
+        </div>
+        <!-- Google I/O Extended 2025 - Baguio SECOND -->
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row-reverse items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="200">
+          <img src="./img/GDG1.png" alt="Google I/O Extended 2025 - Baguio" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg mb-4 lg:mb-0">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">Google I/O Extended 2025 - Baguio</h3>
+            <p class="text-sub text-2xl">Highlights from Google I/O Extended 2025 – Baguio</p>
+          </div>
+        </div>
+        <!-- TARAKI Insight Roundtable THIRD -->
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="300">
+          <img src="./img/Taraki.png" alt="TARAKI Insight Roundtable - Highlights Video" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg mb-4 lg:mb-0">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">TARAKI Insight Roundtable - Highlights Video</h3>
+            <p class="text-sub text-2xl">Highlights from TARAKI Insight Roundtable – ION Hotel, Baguio City</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 section-bg">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-6 text-main" data-aos="fade-up">Let's Connect</h2>
+      <p class="text-lg text-sub mb-8" data-aos="fade-up" data-aos-delay="100">
+        Interested in working together or have a question? Reach out and I'll get back to you soon!
+      </p>
+      <a href="mailto:kydev1323@gmail.com" class="inline-block btn-main px-8 py-4 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-envelope mr-2"></i>kydev1323@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-sub text-sm footer-bg border-t border-[#222222]">
+    &copy; 2025 Kyle Alvaro. All rights reserved.
+  </footer>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true,
+      offset: 80,
+    });
+
+    let certCarouselPaused = false;
+    const certTrack = document.getElementById('cert-track');
+
+    function pauseCertCarousel() {
+      certTrack.style.animationPlayState = 'paused';
+      certCarouselPaused = true;
+    }
+    function resumeCertCarousel() {
+      if (!certCarouselPaused) return;
+      certTrack.style.animationPlayState = 'running';
+      certCarouselPaused = false;
+    }
+    function toggleCertCarousel() {
+      if (certTrack.style.animationPlayState === 'paused') {
+        certTrack.style.animationPlayState = 'running';
+        certCarouselPaused = false;
+      } else {
+        certTrack.style.animationPlayState = 'paused';
+        certCarouselPaused = true;
+      }
+    }
+  </script>
+</body>
+</html>

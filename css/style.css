@@ -1,0 +1,225 @@
+/* ===== Base Styles ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #222;
+  background-size: cover;
+  color: #111111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ===== Navigation ===== */
+#top-nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 50;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-button {
+  position: relative;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #000000;
+}
+
+.nav-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+}
+
+/* ===== Profile Section ===== */
+.profile-img {
+  border-radius: 1.5rem;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.25);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===== Buttons ===== */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-black:hover {
+  background-color: #222;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-black:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ===== Tabs ===== */
+.tab-button {
+  position: relative;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.tab-button.active {
+  color: black;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Tab Content Fade */
+.tab-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tab-content.active {
+  opacity: 1;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gap-8 {
+    gap: 1.5rem;
+  }
+
+  .profile-img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  #profile-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #top-nav {
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #top-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+    /* Floating Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .float-animation {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Tab Active State */
+    .tab-button {
+      position: relative;
+      padding-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    .tab-button.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 3px;
+      background-color: black;
+      border-radius: 2px;
+    }
+
+    /* Fade + Slide Animation for Scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Fade Animation for Tabs */
+    .tab-content {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .tab-content.opacity-100 {
+      opacity: 1;
+    }
+
+    .modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
