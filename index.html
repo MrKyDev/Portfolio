@@ -60,6 +60,175 @@
     #cert-track {
       min-width: 200%;
     }
+
+    /* --- Responsive Fixes --- */
+    @media (max-width: 1024px) {
+      .max-w-5xl, .max-w-6xl, .max-w-7xl {
+        max-width: 100vw !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .section-bg, .card-bg, .footer-bg {
+        border-radius: 0 !important;
+      }
+      .rounded-3xl, .rounded-2xl, .rounded-xl, .rounded-lg, .rounded-full {
+        border-radius: 1rem !important;
+      }
+      .shadow-main {
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+      }
+      .flex-row, .lg\:flex-row, .lg\:flex-row-reverse {
+        flex-direction: column !important;
+      }
+      .gap-12, .gap-16, .gap-24 {
+        gap: 1.5rem !important;
+      }
+      .p-12, .p-10, .p-8 {
+        padding: 1.25rem !important;
+      }
+      .h-[320px], .h-[350px], .h-40 {
+        height: 180px !important;
+      }
+      .w-[500px], .w-[600px] {
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+      .text-5xl { font-size: 2rem !important; }
+      .text-4xl { font-size: 1.5rem !important; }
+      .text-3xl { font-size: 1.25rem !important; }
+      .text-2xl { font-size: 1rem !important; }
+      .text-xl { font-size: 0.95rem !important; }
+      .text-lg { font-size: 0.9rem !important; }
+      .px-4, .px-6 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+      .py-24, .py-20, .py-16 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+      .mb-16 { margin-bottom: 1.5rem !important; }
+      .mb-8 { margin-bottom: 1rem !important; }
+      .mb-6 { margin-bottom: 0.75rem !important; }
+      .mb-4 { margin-bottom: 0.5rem !important; }
+    }
+
+    /* Social Links: Always wrap and center on mobile, bigger and spaced */
+    @media (max-width: 768px) {
+      .social-links {
+        justify-content: center !important;
+        gap: 1.25rem !important;
+        flex-wrap: wrap !important;
+        margin-bottom: 1.5rem !important;
+      }
+      .social-links a {
+        margin-bottom: 0.5rem;
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+        font-size: 1.5rem !important;
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+        transition: transform 0.2s;
+      }
+      .social-links a:hover {
+        transform: scale(1.1);
+      }
+      .social-links i {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    /* Certificates Carousel: Professional, clean, centered on mobile */
+    @media (max-width: 640px) {
+      #cert-carousel {
+        height: auto !important;
+        min-height: unset !important;
+        padding: 1.5rem 0 1rem 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #181818;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+        border-radius: 1.25rem !important;
+        position: relative;
+      }
+      #cert-track {
+        position: static !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        animation: none !important;
+        gap: 1.25rem !important;
+        width: 100% !important;
+        min-width: unset !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding-bottom: 0.5rem !important;
+        scrollbar-width: thin;
+        scrollbar-color: #b0b0b0 #222;
+      }
+      #cert-track::-webkit-scrollbar {
+        height: 8px;
+      }
+      #cert-track::-webkit-scrollbar-thumb {
+        background: #b0b0b0;
+        border-radius: 4px;
+      }
+      #cert-track img {
+        height: 120px !important;
+        min-width: 90px !important;
+        max-width: 160px !important;
+        width: auto !important;
+        flex: 0 0 auto !important;
+        padding: 0.5rem !important;
+        border-radius: 1rem !important;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
+        background: #fff;
+        margin-bottom: 0.25rem;
+        border: 2px solid #222222;
+        transition: transform 0.2s, box-shadow 0.2s;
+        object-fit: contain;
+      }
+      #cert-track img:hover {
+        transform: scale(1.07);
+        box-shadow: 0 6px 20px 0 rgba(0,0,0,0.22);
+        z-index: 2;
+      }
+      #cert-carousel::after {
+        content: 'Swipe certificates →';
+        position: static;
+        display: block;
+        margin: 0.5rem auto 0 auto;
+        color: #b0b0b0;
+        font-size: 1rem;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+      }
+    }
+
+    /* Make burger menu button always visible above overlay */
+    #burger-btn {
+      z-index: 100;
+      position: relative;
+    }
+    /* Make close button always visible above overlay */
+    #close-menu {
+      z-index: 101;
+      position: relative;
+    }
+    /* When mobile menu is open, keep burger button visible and clickable */
+    @media (max-width: 768px) {
+      #burger-btn {
+        position: fixed !important;
+        top: 1rem;
+        right: 1.25rem;
+        background: #181818 !important;
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: flex !important;
+      }
+      #mobile-menu[style*="display: block"] ~ #burger-btn {
+        display: flex !important;
+      }
+    }
   </style>
 </head>
 <body class="font-sans">
@@ -70,7 +239,13 @@
       <div class="flex items-center gap-3">
         <span class="font-bold text-xl text-main tracking-wide">Kydev Portfolio</span>
       </div>
-      <div class="hidden md:flex gap-8 font-semibold">
+      <!-- Burger menu button (mobile only, right side) -->
+      <button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-11 h-11 rounded-full bg-[#181818] shadow-lg hover:bg-[#333] transition-all duration-200 ring-2 ring-[#b0b0b0]" aria-label="Open menu" style="order:2; z-index:100;">
+        <span class="block w-7 h-1 bg-[#f8f8f8] mb-1 rounded"></span>
+        <span class="block w-7 h-1 bg-[#f8f8f8] mb-1 rounded"></span>
+        <span class="block w-7 h-1 bg-[#f8f8f8] rounded"></span>
+      </button>
+      <div class="hidden md:flex gap-8 font-semibold" id="main-nav">
         <a href="#about" class="nav-link">About</a>
         <a href="#works" class="nav-link">Works</a>
         <a href="#photography" class="nav-link">Photography</a>
@@ -79,25 +254,67 @@
       </div>
       <a href="mailto:kydev1323@gmail.com" class="btn-main px-4 py-2 rounded-lg shadow hover:bg-[#b0b0b0] transition hidden md:inline-block">Hire Me</a>
     </div>
+    <!-- Professional Mobile dropdown menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 z-50" style="display:none;">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-60 transition-opacity duration-300"></div>
+      <!-- Slide-in panel with maincontainer background -->
+      <div id="mobile-menu-panel"
+        class="absolute top-0 right-0 h-full w-72 max-w-full flex flex-col pt-8 pb-8 px-6 gap-4 text-lg font-semibold text-main transition-all duration-300 transform translate-x-full rounded-l-2xl"
+        style="background: linear-gradient(135deg, #232526 0%, #181818 60%, #232526 100%); box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);">
+        <div class="flex flex-col items-center mt-8 gap-2 w-full bg-[#232526] bg-opacity-95 rounded-2xl py-6 px-2 shadow-lg">
+          <a href="#about" class="nav-link w-full text-center py-3 px-4 rounded-xl hover:bg-[#333] transition shadow" onclick="closeMobileMenu()">
+            <i class="fas fa-user mr-2"></i>About
+          </a>
+          <a href="#works" class="nav-link w-full text-center py-3 px-4 rounded-xl hover:bg-[#333] transition shadow" onclick="closeMobileMenu()">
+            <i class="fas fa-laptop-code mr-2"></i>Works
+          </a>
+          <a href="#photography" class="nav-link w-full text-center py-3 px-4 rounded-xl hover:bg-[#333] transition shadow" onclick="closeMobileMenu()">
+            <i class="fas fa-camera mr-2"></i>Photography
+          </a>
+          <a href="#videography" class="nav-link w-full text-center py-3 px-4 rounded-xl hover:bg-[#333] transition shadow" onclick="closeMobileMenu()">
+            <i class="fas fa-video mr-2"></i>Videography
+          </a>
+          <a href="#contact" class="nav-link w-full text-center py-3 px-4 rounded-xl hover:bg-[#333] transition shadow" onclick="closeMobileMenu()">
+            <i class="fas fa-envelope mr-2"></i>Contact
+          </a>
+          <a href="mailto:kydev1323@gmail.com" class="btn-main px-6 py-3 rounded-xl shadow hover:bg-[#b0b0b0] transition mt-4 w-full text-center font-bold" onclick="closeMobileMenu()">
+            <i class="fas fa-paper-plane mr-2"></i>Hire Me
+          </a>
+        </div>
+        <div class="text-center text-xs text-sub mt-8 opacity-70">
+          &copy; 2025 Kyle Alvaro
+        </div>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="about" class="pt-28 pb-16 section-bg border-b border-[#222222]">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4 sm:px-6">
       <div class="flex-shrink-0" data-aos="fade-right">
-        <img src="./img/kyle.jpg" alt="Kyle Alvaro" class="w-48 h-48 rounded-full border-4 border-[#f8f8f8] shadow-2xl object-cover">
+        <img src="./img/kyle.jpg" alt="Kyle Alvaro" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-[#f8f8f8] shadow-2xl object-cover mx-auto md:mx-0">
       </div>
       <div class="flex-1 text-center md:text-left" data-aos="fade-left">
-        <h1 class="text-5xl font-extrabold mb-2 text-main tracking-tight">Kyle Joshua Noel P. Alvaro</h1>
-        <p class="text-2xl text-sub mb-4 font-medium">Front-End Developer | Photographer | Videographer</p>
-        <p class="text-sub mb-6">I create beautiful, responsive websites and capture moments through my lens. Let's build something amazing together!</p>
-        <div class="flex gap-4 justify-center md:justify-start mb-4">
-          <a href="https://www.facebook.com/PCM2600/" target="_blank" class="bg-[#f8f8f8] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/kydev_pcm2600/" target="_blank" class="bg-[#222222] text-[#f8f8f8] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/MrKyDev" target="_blank" class="bg-[#f8f8f8] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition"><i class="fab fa-github"></i></a>
-          <a href="mailto:kydev1323@gmail.com" class="bg-[#b0b0b0] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#f8f8f8] transition"><i class="fas fa-envelope"></i></a>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 text-main tracking-tight">Kyle Joshua Noel P. Alvaro</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-sub mb-4 font-medium">Front-End Developer | Photographer | Videographer</p>
+        <p class="text-sub mb-6 text-base sm:text-lg">A passionate frontend developer specializing in creating clean, user-friendly interfaces with a focus on responsive design and smooth user experiences. Additionally, I work as a freelance photographer and videographer, bringing a unique creative perspective to my development projects. This combination of technical expertise and visual storytelling allows me to craft digital experiences that are not only functionally robust but also aesthetically compelling and user centered.</p>
+        <!-- Responsive Social Links -->
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start mb-4 social-links">
+          <a href="https://www.facebook.com/PCM2600/" target="_blank" class="bg-[#f8f8f8] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition">
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/kydev_pcm2600/" target="_blank" class="bg-[#222222] text-[#f8f8f8] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition">
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a href="https://github.com/MrKyDev" target="_blank" class="bg-[#f8f8f8] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#b0b0b0] transition">
+            <i class="fab fa-github text-lg"></i>
+          </a>
+          <a href="mailto:kydev1323@gmail.com" class="bg-[#b0b0b0] text-[#111111] w-10 h-10 flex items-center justify-center rounded-full shadow hover:bg-[#f8f8f8] transition">
+            <i class="fas fa-envelope text-lg"></i>
+          </a>
         </div>
-        <a href="#works" class="inline-block btn-main px-6 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition">View My Work</a>
+        <a href="#works" class="inline-block btn-main px-6 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition text-base sm:text-lg">View My Work</a>
       </div>
     </div>
     <!-- Skills & Tech Stack (added inside About section) -->
@@ -156,7 +373,7 @@
           <img src="./img/certs/cert 5.png" alt="Certificate 5" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
         </div>
       </div>
-      <p class="text-sub text-center mt-3 text-base">Hover or click to pause the carousel and read certificates.</p>
+      <p class="text-sub text-center mt-3 text-base">Tap or hover to pause the carousel and read certificates.</p>
     </div>
     <!-- Events Attended Section -->
     <div class="max-w-6xl mx-auto mt-16 px-4">
@@ -278,7 +495,7 @@
           </div>
         </div>
         <!-- TARAKI Insight Roundtable THIRD -->
-        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-bg rounded-2xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="300">
           <img src="./img/Taraki.png" alt="TARAKI Insight Roundtable - Highlights Video" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg mb-4 lg:mb-0">
           <div class="flex-1 text-center lg:text-left">
             <h3 class="font-bold text-3xl mb-2 text-main">TARAKI Insight Roundtable - Highlights Video</h3>
@@ -336,6 +553,39 @@
         certTrack.style.animationPlayState = 'paused';
         certCarouselPaused = true;
       }
+    }
+
+    // Burger menu toggle functionality (no close button, toggle on burger click)
+    const burgerBtn = document.getElementById('burger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+    let menuOpen = false;
+
+    burgerBtn.addEventListener('click', () => {
+      if (!menuOpen) {
+        mobileMenu.style.display = 'block';
+        setTimeout(() => {
+          mobileMenuPanel.style.transform = 'translateX(0)';
+        }, 10);
+        // Allow scrolling when menu is open
+        document.body.style.overflow = '';
+        menuOpen = true;
+      } else {
+        mobileMenuPanel.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          mobileMenu.style.display = 'none';
+          menuOpen = false;
+        }, 300);
+      }
+    });
+
+    function closeMobileMenu() {
+      mobileMenuPanel.style.transform = 'translateX(100%)';
+      setTimeout(() => {
+        mobileMenu.style.display = 'none';
+        menuOpen = false;
+      }, 300);
     }
   </script>
 </body>
