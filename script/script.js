@@ -133,3 +133,107 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+ AOS.init({
+      duration: 900,
+      once: true,
+      offset: 80,
+    });
+
+    let certCarouselPaused = false;
+    const certTrack = document.getElementById('cert-track');
+
+    function pauseCertCarousel() {
+      certTrack.style.animationPlayState = 'paused';
+      certCarouselPaused = true;
+    }
+    function resumeCertCarousel() {
+      if (!certCarouselPaused) return;
+      certTrack.style.animationPlayState = 'running';
+      certCarouselPaused = false;
+    }
+    function toggleCertCarousel() {
+      if (certTrack.style.animationPlayState === 'paused') {
+        certTrack.style.animationPlayState = 'running';
+        certCarouselPaused = false;
+      } else {
+        certTrack.style.animationPlayState = 'paused';
+        certCarouselPaused = true;
+      }
+    }
+
+    // Burger menu toggle functionality (no close button, toggle on burger click)
+    const burgerBtn = document.getElementById('burger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+    let menuOpen = false;
+
+    burgerBtn.addEventListener('click', () => {
+      if (!menuOpen) {
+        mobileMenu.style.display = 'block';
+        setTimeout(() => {
+          mobileMenuPanel.style.transform = 'translateX(0)';
+        }, 10);
+        // Allow scrolling when menu is open
+        document.body.style.overflow = '';
+        menuOpen = true;
+      } else {
+        mobileMenuPanel.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          mobileMenu.style.display = 'none';
+          menuOpen = false;
+        }, 300);
+      }
+    });
+
+    function closeMobileMenu() {
+      mobileMenuPanel.style.transform = 'translateX(100%)';
+      setTimeout(() => {
+        mobileMenu.style.display = 'none';
+        menuOpen = false;
+      }, 300);
+    }
+
+    // --- PROTECTION LAYER ---
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable common shortcut keys for DevTools, Save, Print, View Source, Screenshot, etc.
+    document.addEventListener('keydown', function(e) {
+      // List of blocked key combos
+      if (
+        // F12 or Ctrl+Shift+I/J/C/U
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
+        // Ctrl+S, Ctrl+U, Ctrl+P, Ctrl+Shift+S
+        (e.ctrlKey && ['S', 'U', 'P'].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === 'S') ||
+        // Cmd+Opt+I/J/C/U (Mac)
+        (e.metaKey && e.altKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
+        // Cmd+S, Cmd+P, Cmd+U (Mac)
+        (e.metaKey && ['S', 'P', 'U'].includes(e.key.toUpperCase())) ||
+        // PrintScreen
+        e.key === 'PrintScreen'
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Attempt to block PrintScreen (not fully reliable)
+    window.addEventListener('keyup', function(e) {
+      if (e.key === 'PrintScreen') {
+        navigator.clipboard.writeText('');
+        alert('Screenshots are disabled on this page.');
+      }
+    });
+
+    // Attempt to block drag and drop saving of images
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+
+    //
