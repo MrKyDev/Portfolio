@@ -10,7 +10,8 @@ body {
   line-height: 1.6;
   background: #111111;
   color: #f8f8f8;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif; 
+      
 }
 
 /* ===== Navigation ===== */
@@ -321,6 +322,8 @@ button:focus {
     /* Social Links: Always wrap and center on mobile, bigger and spaced */
     @media (max-width: 768px) {
       .social-links {
+        display: flex !important;
+        flex-direction: row !important;
         justify-content: center !important;
         gap: 1.25rem !important;
         flex-wrap: wrap !important;
@@ -341,78 +344,80 @@ button:focus {
         font-size: 1.5rem !important;
       }
     }
-
     /* Certificates Carousel: Professional, clean, centered on mobile */
-    @media (max-width: 640px) {
-      #cert-carousel {
-        height: auto !important;
-        min-height: unset !important;
-        padding: 1.5rem 0 1rem 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: #181818;
-        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
-        border-radius: 1.25rem !important;
-        position: relative;
-      }
-      #cert-track {
-        position: static !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        animation: none !important;
-        gap: 1.25rem !important;
-        width: 100% !important;
-        min-width: unset !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        padding-bottom: 0.5rem !important;
-        scrollbar-width: thin;
-        scrollbar-color: #b0b0b0 #222;
-      }
-      #cert-track::-webkit-scrollbar {
-        height: 8px;
-      }
-      #cert-track::-webkit-scrollbar-thumb {
-        background: #b0b0b0;
-        border-radius: 4px;
-      }
-      #cert-track img {
-        height: 120px !important;
-        min-width: 90px !important;
-        max-width: 160px !important;
-        width: auto !important;
-        flex: 0 0 auto !important;
-        padding: 0.5rem !important;
-        border-radius: 1rem !important;
-        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
-        background: #fff;
-        margin-bottom: 0.25rem;
-        border: 2px solid #222222;
-        transition: transform 0.2s, box-shadow 0.2s;
-        object-fit: contain;
-      }
-      #cert-track img:hover {
-        transform: scale(1.07);
-        box-shadow: 0 6px 20px 0 rgba(0,0,0,0.22);
-        z-index: 2;
-      }
-      #cert-carousel::after {
-        content: 'Swipe certificates →';
-        position: static;
-        display: block;
-        margin: 0.5rem auto 0 auto;
-        color: #b0b0b0;
-        font-size: 1rem;
-        background: none;
-        padding: 0;
-        border-radius: 0;
-        text-align: center;
-      }
-    }
+   @media (max-width: 640px) {
+  #cert-carousel {
+    height: auto !important;
+    min-height: unset !important;
+    padding: 1.5rem 0 2rem 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #181818;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    border-radius: 1.25rem !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #cert-track {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;       /* ✅ snap effect */
+    -webkit-overflow-scrolling: touch;   /* ✅ smooth iOS swipe */
+    gap: 1.5rem !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 0 1rem 1rem 1rem !important;
+    scrollbar-width: thin;
+    scrollbar-color: #b0b0b0 #222;
+  }
+
+  #cert-track::-webkit-scrollbar {
+    height: 6px;
+  }
+  #cert-track::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border-radius: 4px;
+  }
+
+  #cert-track img {
+    height: auto !important;
+    width: 80% !important;                  /* ✅ make them big cards */
+    max-width: 320px !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: center;              /* ✅ snaps each cert to center */
+    padding: 0.75rem !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
+    background: #fff;
+    border: 2px solid #222222;
+    transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: contain;
+  }
+
+  #cert-track img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+
+  #cert-carousel::after {
+    content: '⬅️ Swipe to view certificates ➡️';
+    display: block;
+    margin-top: 0.75rem;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0.8;
+  }
+}
+
 
     /* Make burger menu button always visible above overlay */
     #burger-btn {
