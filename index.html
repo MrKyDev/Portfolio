@@ -31,7 +31,7 @@
         <a href="#videography" class="nav-link">Videography</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
-      <a href="mailto:kydev1323@gmail.com" class="btn-main px-4 py-2 rounded-lg shadow hover:bg-[#b0b0b0] transition hidden md:inline-block">Hire Me</a>
+      <a href="mailto:kydev1323@gmail.com" class="btn-main px-4 py-2 rounded-lg shadow hover:bg-[#b0b0b0] transition hidden md:inline-block">Work with Me</a>
     </div>
     <!-- Professional Mobile dropdown menu (hidden by default) -->
     <div id="mobile-menu" class="md:hidden fixed inset-0 z-50" style="display:none;">
@@ -57,9 +57,10 @@
           <a href="#contact" class="nav-link w-full text-center py-3 px-4 rounded-xl hover:bg-[#333] transition shadow" onclick="closeMobileMenu()">
             <i class="fas fa-envelope mr-2"></i>Contact
           </a>
+          <!--
           <a href="mailto:kydev1323@gmail.com" class="btn-main px-6 py-3 rounded-xl shadow hover:bg-[#b0b0b0] transition mt-4 w-full text-center font-bold" onclick="closeMobileMenu()">
             <i class="fas fa-paper-plane mr-2"></i>Hire Me
-          </a>
+          </a>-->
         </div>
         <div class="text-center text-xs text-sub mt-8 opacity-70">
           &copy; 2025 Kyle Alvaro
@@ -99,11 +100,33 @@
     <!-- Skills & Tech Stack (added inside About section) -->
     <div class="max-w-6xl mx-auto mt-16 px-4">
       <h2 class="text-4xl font-extrabold mb-10 text-center text-main" data-aos="fade-up">Skills & Tech Stack</h2>
-      <div class="flex flex-col md:flex-row gap-12 justify-center items-start">
+      <div class="flex flex-col md:flex-row gap-12 justify-between items-stretch flex-wrap">
+        <!-- Soft Skills -->
+        <div class="flex-1 card-bg rounded-2xl shadow-main p-8 min-w-[250px] flex flex-col items-center justify-center text-center" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-4 text-main">Soft Skills</h3>
+          <ul class="space-y-3 text-lg text-sub flex-1">
+            <li><i class="fas fa-users text-[#b0b0b0] mr-2"></i>Teamwork & Collaboration</li>
+            <li><i class="fas fa-comments text-[#b0b0b0] mr-2"></i>Communication</li>
+            <li><i class="fas fa-lightbulb text-[#b0b0b0] mr-2"></i>Problem Solving</li>
+            <li><i class="fas fa-clock text-[#b0b0b0] mr-2"></i>Time Management</li>
+            <li><i class="fas fa-brain text-[#b0b0b0] mr-2"></i>Adaptability</li>
+          </ul>
+        </div>
+        <!-- Hard Skills -->
+        <div class="flex-1 card-bg rounded-2xl shadow-main p-8 min-w-[250px] flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-2xl font-bold mb-4 text-main">Hard Skills</h3>
+          <ul class="space-y-3 text-lg text-sub flex-1">
+            <li><i class="fas fa-camera text-[#b0b0b0] mr-2"></i>Photography</li>
+            <li><i class="fas fa-video text-[#b0b0b0] mr-2"></i>Videography</li>
+            <li><i class="fas fa-edit text-[#b0b0b0] mr-2"></i>Photo/Video Editing</li>
+            <li><i class="fas fa-paint-brush text-[#b0b0b0] mr-2"></i>Graphic Design</li>
+            <li><i class="fas fa-database text-[#b0b0b0] mr-2"></i>Database Management</li>
+          </ul>
+        </div>
         <!-- Coding Languages & Frameworks -->
-        <div class="flex-1 card-bg rounded-2xl shadow-main p-8" data-aos="fade-right">
+        <div class="flex-1 card-bg rounded-2xl shadow-main p-8 min-w-[250px] flex flex-col items-center justify-center text-center" data-aos="fade-right">
           <h3 class="text-2xl font-bold mb-4 text-main">Coding Languages & Frameworks</h3>
-          <ul class="space-y-3 text-lg text-sub">
+          <ul class="space-y-3 text-lg text-sub flex-1">
             <li><i class="fab fa-html5 text-[#f06529] mr-2"></i>HTML5</li>
             <li><i class="fab fa-css3-alt text-[#2965f1] mr-2"></i>CSS / Tailwind CSS</li>
             <li><i class="fab fa-js-square text-[#f7df1e] mr-2"></i>JavaScript</li>
@@ -112,9 +135,9 @@
           </ul>
         </div>
         <!-- Software & Applications -->
-        <div class="flex-1 card-bg rounded-2xl shadow-main p-8" data-aos="fade-left">
+        <div class="flex-1 card-bg rounded-2xl shadow-main p-8 min-w-[250px] flex flex-col items-center justify-center text-center" data-aos="fade-left">
           <h3 class="text-2xl font-bold mb-4 text-main">Softwares / Applications I Use</h3>
-          <ul class="space-y-3 text-lg text-sub">
+          <ul class="space-y-3 text-lg text-sub flex-1">
             <li><i class="fas fa-camera-retro text-[#b0b0b0] mr-2"></i>Adobe Lightroom</li>
             <li><i class="fas fa-video text-[#b0b0b0] mr-2"></i>Adobe Premiere Pro</li>
             <li><i class="fas fa-film text-[#b0b0b0] mr-2"></i>Capcut</li>
@@ -231,21 +254,39 @@
           <img src="./img/cedia.jpg" alt="Boost Nissan Cedia" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg">
           <div class="flex-1 text-center lg:text-left">
             <h3 class="font-bold text-3xl mb-2 text-main">Boost Nissan Cedia</h3>
-            <p class="text-sub text-2xl">Owner: Bjorn Vibar</p>
-          </div>
+            <p>Photoshot taken in SM City Baguio Parking Lot with the permission of the Owner</p>
+            <div class="flex gap-4">
+          <a href="https://www.facebook.com/PCM2600/posts/pfbid023JXS8HshRgZ43UfW1fzz2LiGCm2BFnLYgg7SVvTwPgKo1nKiUXDxr8fo7x9FKhAol" target="_blank" class="btn-main px-8 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition text-base flex items-center gap-2">
+            <i class="fab fa-facebook-f"></i>
+            View Photo Set
+          </a>
+        </div>
+        </div>
         </div>
         <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row-reverse items-center gap-12 w-full max-w-5xl" data-aos="zoom-in" data-aos-delay="200">
           <img src="./img/Int.jpg" alt="Honda Integra" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg">
           <div class="flex-1 text-center lg:text-left">
             <h3 class="font-bold text-3xl mb-2 text-main">Honda Integra</h3>
-            <p class="text-sub text-2xl">Owner: Aldwin Tiong</p>
+            <p>Photoshot taken in SM City Baguio Parking Lot with the permission of the Owner</p>
+            <div class="flex gap-4">
+          <a href="https://www.facebook.com/PCM2600/posts/pfbid0etGcTKzzFmUCQfKTCV1YmP5aEcs9U3Xt8iTirX16KL1GC7FThxHyPZxiA7JW6EmLl" target="_blank" class="btn-main px-8 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition text-base flex items-center gap-2">
+            <i class="fab fa-facebook-f"></i>
+            View Photo Set
+          </a>
+          </div>
           </div>
         </div>
         <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="zoom-in" data-aos-delay="300">
           <img src="./img/miata.jpg" alt="Mazda Miata" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg">
           <div class="flex-1 text-center lg:text-left">
-            <h3 class="font-bold text-3xl mb-2 text-main">Mazda Miata</h3>
-            <p class="text-sub text-2xl">Owner: Patrick Vannce</p>
+            <h3 class="font-bold text-3xl mb-2 text-main">Mazda Miata</h3>   
+            <p>Photoshot taken in SM City Baguio Parking Lot with the permission of the Owner</p>
+            <div class="flex gap-4">
+          <a href="https://www.facebook.com/PCM2600/posts/pfbid02kcA7tn6pJGeSpg1aTQpLWJzVsRa9BFZKKtVetXppRLzDqttfGy1F5sYt6xSHHVFEl" target="_blank" class="btn-main px-8 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition text-base flex items-center gap-2">
+            <i class="fab fa-facebook-f"></i>
+            View Photo Set
+          </a>
+          </div>
           </div>
         </div>
       </div>
@@ -295,6 +336,30 @@
             <p class="text-sub text-2xl">Highlights from TARAKI Insight Roundtable – ION Hotel, Baguio City</p>
           </div>
         </div>
+        <!-- R&I Week 2025 -->
+        <div class="card-bg rounded-3xl shadow-main p-12 flex flex-col lg:flex-row-reverse items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="200">
+          <img src="./img/R&I Week 2025.png" alt="Google I/O Extended 2025 - Baguio" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg mb-4 lg:mb-0">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">R&I Week 2025</h3>
+            <p class="text-sub text-2xl">Highlights from July 29 - July 31 | UC Theater</p>
+          </div>
+        </div>
+        <!-- Awarding Day R&I Week 2025 -->
+        <div class="card-bg rounded-2xl shadow-main p-12 flex flex-col lg:flex-row items-center gap-12 w-full max-w-5xl" data-aos="fade-up" data-aos-delay="300">
+          <img src="./img/R&I Week Awarding.png" alt="TARAKI Insight Roundtable - Highlights Video" class="rounded-2xl w-full lg:w-[500px] h-[320px] object-cover shadow-lg mb-4 lg:mb-0">
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="font-bold text-3xl mb-2 text-main">R&I Week Awarding Ceremony</h3>
+            <p class="text-sub text-2xl">Awarding Ceremony July 31, 2025 | UC Theater</p>
+          </div>
+        </div>
+              <!-- Note and Button to view more -->
+      <div class="mt-12 flex flex-col items-center">
+        <p class="text-sub text-lg mb-4 text-center">Want to see the full video?</p>
+        <div class="flex gap-4">
+          <a href="https://drive.google.com/drive/folders/12JOXZfAGpHVmvS_xoubVORPPA220Np6w?usp=drive_link" target="_blank" class="btn-main px-8 py-3 rounded-lg font-bold shadow hover:bg-[#b0b0b0] transition text-base flex items-center gap-2">
+            <i class="fab fa-google drive-g"></i>
+            Watch the Video
+          </a>
       </div>
     </div>
   </section>
