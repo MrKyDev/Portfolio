@@ -303,7 +303,7 @@ button:focus {
       .w-[500px], .w-[600px] {
         width: 100% !important;
         max-width: 100vw !important;
-      }
+      }   
       .text-5xl { font-size: 2rem !important; }
       .text-4xl { font-size: 1.5rem !important; }
       .text-3xl { font-size: 1.25rem !important; }
