@@ -180,41 +180,89 @@
       </div>
     </div>
 
-    <!-- Certificates Carousel -->
-    <div class="max-w-6xl mx-auto mt-16 px-4">
-      <h2 class="text-3xl font-extrabold mb-8 text-center text-main" data-aos="fade-up">Certificates</h2>
-      <div 
-        id="cert-carousel" 
-        class="relative overflow-hidden w-full h-[420px] rounded-2xl card-bg shadow-main cursor-pointer flex items-center justify-center"
-        onmouseenter="pauseCertCarousel()" 
-        onmouseleave="resumeCertCarousel()"
-        onclick="toggleCertCarousel()"
-      >
-        <div id="cert-track" class="absolute flex items-center h-full gap-12 will-change-transform" style="animation: cert-scroll 20s linear infinite;">
-          <!-- Replace the src with your certificate images -->
-          <img src="./img/certs/cert 1.jfif" alt="Certificate 1" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 2.jfif" alt="Certificate 2" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 3.jfif" alt="Certificate 3" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 4.jfif" alt="Certificate 4" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 5.png" alt="Certificate 5" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/Cert 6.jpg" alt="Certificate 6" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/HOUR CODE CERT.jpg" alt="Certificate 7" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/Hour of Code Flappy.jpg" alt="Certificate 8" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/Hour of Code Flappy Elsa Code.jpg" alt="Certificate 9" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <!-- Duplicate for infinite effect -->
-          <img src="./img/certs/cert 1.jfif" alt="Certificate 1" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 2.jfif" alt="Certificate 2" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 3.jfif" alt="Certificate 3" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 4.jfif" alt="Certificate 4" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/cert 5.png" alt="Certificate 5" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/Cert 6.jpg" alt="Certificate 6" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/HOUR CODE CERT.jpg" alt="Certificate 7" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/Hour of Code Flappy.jpg" alt="Certificate 8" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-          <img src="./img/certs/Hour of Code Flappy Elsa Code.jpg" alt="Certificate 9" class="h-[350px] rounded-2xl shadow-lg border-2 border-[#222222] bg-white px-4 py-4 object-contain transition duration-300 hover:scale-105" />
-        </div>
-      </div>
-      <p class="text-sub text-center mt-3 text-base">Tap or hover to pause the carousel and read certificates.</p>
+<!-- Certificates Section -->
+<div class="max-w-7xl mx-auto mt-16 px-4">
+  <h2 class="text-3xl font-extrabold mb-8 text-center text-main" data-aos="fade-up">Certificates</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    
+    <!-- Certificate Card 1 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up">
+      <img src="./img/certs/cert 2.jfif" alt="Certificate 1" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Completion</h3>
+      <p class="text-sub text-center">Issued by University of the Cordilleras - InTTO</p>
     </div>
+
+    <!-- Certificate Card 2 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+      <img src="./img/certs/cert 1.jfif" alt="Certificate 2" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Resilience Award</h3>
+      <p class="text-sub text-center">Issued by University of the Cordilleras - InTTO</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/cert 4.jfif" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Basic Office Productivity</h3>
+      <p class="text-sub text-center">Issued by University of the Cordilleras CITCS Department</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/cert 3.jfif" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Appreciation</h3>
+      <p class="text-sub text-center">Issued by University of the Cordilleras - R&N Week</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/cert 5.png" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Participation</h3>
+      <p class="text-sub text-center">Issued by Samvinna</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/Cert 6.jpg" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Project Acceptance</h3>
+      <p class="text-sub text-center">Issued by Arthur Joel Tibaldo</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/HOUR CODE CERT.jpg" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Completion of the AI for Ocean</h3>
+      <p class="text-sub text-center">Issued by Hadi Partovi |<br> Co-Founder and Chief Executive Officer | Code.org</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/cert 7.png" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Participation</h3>
+      <p class="text-sub text-center">Issued by Allan A Custodio | <br> AI Ready ASEAN PROGRAMME</p>
+    </div>
+
+    <!-- Certificate Card 3 -->
+    <div class="card-bg rounded-2xl shadow-main p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="./img/certs/Ai Deas Cert 001.jpg" alt="Certificate 3" 
+           class="h-[300px] w-full object-contain rounded-xl mb-4 border-2 border-[#222222] bg-white p-4" />
+      <h3 class="text-xl font-bold text-main mb-2 text-center">Certificate of Participation | <br>Ai Deas</h3>
+      <p class="text-sub text-center">Issued by <br>Emmy Lou V. Delfin | Director IV | ICT Industry Development Bureau <br>Jimmicio S. Daoaten | Director IV | DICT Cordillera Administrative Region</p>
+    </div>
+
+    
+    
+  </div>
+</div>
+
     <!-- Events Attended Section -->
     <div class="max-w-6xl mx-auto mt-16 px-4">
       <h2 class="text-3xl font-extrabold mb-8 text-center text-main" data-aos="fade-up">Events and Seminar / Webinar Attended</h2>
@@ -258,6 +306,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-5xl font-extrabold mb-16 text-center text-main" data-aos="fade-up">Featured Website Projects</h2>
       <div class="flex flex-col gap-24">
+
         <!-- Project 1 -->
         <div class="flex flex-col lg:flex-row items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="100">
           <img src="./img/ArtistHub.png" alt="ArtistHub Website" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
@@ -267,15 +316,17 @@
             <a href="https://artisthubbaguio.online" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
           </div>
         </div>
-        <!-- Project 2 -->
+
+        <!--Project 2-->
         <div class="flex flex-col lg:flex-row-reverse items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="200">
-          <img src="./img/digital clock.png" alt="Digital Clock" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
+          <img src="./img/Light.png" alt="Digital Clock" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
           <div class="flex-1 text-center lg:text-left">
-            <h3 class="text-4xl font-bold mb-4 text-main">Digital Clock</h3>
-            <p class="text-2xl text-sub mb-8">A responsive world clock with live updates and timezone selection.</p>
-            <a href="https://mrkydev.github.io/Digital-Clock/" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
+            <h3 class="text-4xl font-bold mb-4 text-main">Light-House</h3>
+            <p class="text-2xl text-sub mb-8">A responsive E-Commerce Website. I am the one who made the Front UI Design</p>
+            <a href="https://mrkydev.github.io/Light-House/" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
           </div>
         </div>
+
         <!-- Project 3 -->
         <div class="flex flex-col lg:flex-row items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="300">
           <img src="./img/tictac.png" alt="TicTacToe Game" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
@@ -285,16 +336,15 @@
             <a href="https://mrkydev.github.io/Titactoe-Game/" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
           </div>
         </div>
-        <!--Project 4-->
+        <!-- Project 4 -->
         <div class="flex flex-col lg:flex-row-reverse items-center gap-16 card-bg rounded-3xl shadow-main p-10" data-aos="fade-up" data-aos-delay="200">
-          <img src="./img/CrowdShift.png" alt="Digital Clock" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
+          <img src="./img/digital clock.png" alt="Digital Clock" class="w-full lg:w-[600px] h-[350px] object-cover rounded-3xl shadow-lg hover:scale-105 transition">
           <div class="flex-1 text-center lg:text-left">
-            <h3 class="text-4xl font-bold mb-4 text-main">CrowdShift <br><span>Less Congestion, More Connection</h3>
-            <p class="text-2xl text-sub mb-8">An AI-driven tourism platform that builds smart itineraries, avoids crowded spots, and connects travelers to local businesses and events.</p>
-            <a href="https://mrkydev.github.io/CrowdShift/" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
+            <h3 class="text-4xl font-bold mb-4 text-main">Digital Clock</h3>
+            <p class="text-2xl text-sub mb-8">A responsive world clock with live updates and timezone selection.</p>
+            <a href="https://mrkydev.github.io/Digital-Clock" target="_blank" class="inline-block btn-main px-8 py-4 rounded-xl shadow hover:bg-[#b0b0b0] transition text-xl">View Project</a>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
