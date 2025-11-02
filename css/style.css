@@ -298,13 +298,13 @@ button:focus {
       .p-12, .p-10, .p-8 {
         padding: 1.25rem !important;
       }
-      .h-[320px], .h-[350px], .h-40 {
+      .h-320, .h-350, .h-40 {
         height: 180px !important;
       }
-      .w-[500px], .w-[600px] {
+      .w-500, .w-600 {
         width: 100% !important;
         max-width: 100vw !important;
-      }   
+      }
       .text-5xl { font-size: 2rem !important; }
       .text-4xl { font-size: 1.5rem !important; }
       .text-3xl { font-size: 1.25rem !important; }
@@ -442,4 +442,3 @@ button:focus {
         display: flex !important;
       }
     }
-
